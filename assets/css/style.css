@@ -3939,9 +3939,9 @@ body.hidden {
     .repair__box:last-child:before {
       height: calc(100% - 61.5px); }
     .repair__box:before {
-      left: 27px; }
+      left: 25px; }
   .repair .btn:before {
-    width: 30px; }
+    width: 31px; }
   .repair__title {
     margin-bottom: 15px; }
     .repair__title:before {
