@@ -150,7 +150,59 @@
 					</div>
 				</div>
 				<div class="contact__map">
-					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aaf60263165f93ac17bb0e1892c847c928c78701e47d4f2df08ffbaa294af70b9&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
+  					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=89611f12-74a6-43cc-bb51-779a8262b656" type="text/javascript"></script>
+					<div id="map" style="width:100%; height:100%;"></div>
+						<script>
+							ymaps.ready(function () {
+							    var myMap = new ymaps.Map('map', {
+							    center: [55.690572, 37.473565],
+							        zoom: 17,
+							    
+							    controls:[],
+							        },
+							    {
+							      yandexMapDisablePoiInteractivity: true,
+							    },  ),
+	    				BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+	    			        '<div class="mybaloon" style="margin: 10px;">'+'123'+
+	    			          
+	    			        '</div>', {
+	    			        // Переопределяем функцию build, чтобы при создании макета начинать
+	    			        // слушать событие click на кнопке-счетчике.
+	    			        build: function () {
+	    			            // Сначала вызываем метод build родительского класса.
+	    			            BalloonContentLayout.superclass.build.call(this);
+	    			            // А затем выполняем дополнительные действия.
+	    			            
+	    			        },
+	    			    });
+	        			myPlacemarkWithContent = new ymaps.Placemark([55.690272, 37.476685], {
+	        			    balloonContent: 'Москва, ул. Лобачевского, д. 110, корп.1',
+	      					maxWidth:294,
+	      					maxHeight:125
+	        			}, {
+							balloonContentLayout: BalloonContentLayout,
+							balloonPanelMaxMapArea: 0, 
+							balloonContentOffset: [215, 15],
+							iconLayout: 'default#imageWithContent',
+							// Своё изображение иконки метки.
+							iconImageHref: 'assets/images/map-pin.svg',
+							// Размеры метки.
+							iconImageSize: [52, 68],
+							// Смещение левого верхнего угла иконки относительно
+							// её "ножки" (точки привязки).
+							iconImageOffset: [-14, -94],
+							// Смещение слоя с содержимым относительно слоя с картинкой.
+							iconContentOffset: [15, 15],
+							// Макет содержимого.
+						});
+	   					 myMap.geoObjects
+	    				    .add(myPlacemarkWithContent);
+	  						myMap.behaviors.disable('scrollZoom');
+	  						myMap.behaviors.disable('drag');
+	  						myMap.behaviors.disable('dblClickZoom');
+						});
+	  				</script>
 				</div>
 			</div><!--/contact-->
 			<section class="application section" id="application">
