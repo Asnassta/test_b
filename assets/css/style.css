@@ -1811,10 +1811,12 @@
   .faq__item {
     padding: 15px 20px; }
   .faq__question:before {
-    width: 16px; }
+    width: 16px;
+    background-color: #1F72E4; }
   .faq__question:after {
     height: 16px;
-    right: 8px; }
+    right: 8px;
+    background-color: #1F72E4; }
   .faq__answer {
     padding-top: 15px;
     font-size: 14px; }

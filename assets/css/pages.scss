@@ -1017,10 +1017,12 @@
 		&__question {
 			&:before {
 				width: 16px;
+				background-color: $blue;
 			}
 			&:after {
 				height: 16px;
-				right: 8px; 
+				right: 8px;
+				background-color: $blue; 
 			}
 		}
 		&__answer {
