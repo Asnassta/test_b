@@ -78,7 +78,7 @@
 		align-items: flex-end;
 	}
 	&-bottom {
-		background-color: $bl;
+		background-color: $black;
 		&__inner {
 			display: flex;
 			align-items: flex-start;
@@ -139,7 +139,7 @@
 			padding: 25px 0;
 			font-family: $ff;
 			font-size: 16px;
-			font-weight: 700;
+			font-weight: 400;
 			color: $wh;
 			line-height: 1.125;
 			position: relative;
@@ -155,9 +155,11 @@
 				opacity: 0;
 				transition: all .2s linear;
 			}
-			&:hover {
-				&:after {
-					opacity: 1;
+			@media(min-width: 992px) {
+				&:hover {
+					&:after {
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -508,7 +510,7 @@
 			padding-right: 0;
 			margin-right: 0;
 			font-size: 13px;
-			&:first-child {
+			&:nth-last-child(2) {
 				display: inline-block;
 				padding-left: 18px;
 				&:before {
