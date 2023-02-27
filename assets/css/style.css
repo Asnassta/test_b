@@ -229,9 +229,21 @@
       margin-right: 0; }
     .header-info__box_gray {
       background-color: #E7E8E9;
-      padding: 12px 15.5px 13px 0; }
+      padding: 12px 8px 13px 8px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
       .header-info__box_gray img {
         max-width: 100%; }
+      .header-info__box_gray .header-info__item {
+        color: #232529; }
     .header-info__box_dgray {
       background-color: #4E4E50;
       padding: 12px 8px 13px 12px;
@@ -452,7 +464,7 @@
     height: 92px;
     margin-right: 5px; }
     .header-info__box_gray {
-      padding: 9px 12px 12px 0; }
+      padding: 9px 12px 12px 8px; }
     .header-info__box_dgray {
       padding: 9px 12px 12px 8px; }
   .header-info__item {
@@ -1237,14 +1249,17 @@ body.hidden {
   align-items: center; }
 
 .about-video {
-  width: 65.7%;
+  width: 60%;
+  min-height: 200px;
   position: relative;
   cursor: pointer; }
   .about-video__content > * {
-    width: 100%;
+    width: 100% !important;
     min-height: 200px;
     -o-object-fit: cover;
     object-fit: cover; }
+  .about-video__content .html5-video-player .video-stream {
+    width: 100%; }
   .about-video__icon {
     position: absolute;
     top: 50%;
@@ -1254,14 +1269,15 @@ body.hidden {
     transform: translate(-50%, -50%);
     -webkit-transition: all .2s linear;
     -o-transition: all .2s linear;
-    transition: all .2s linear; }
+    transition: all .2s linear;
+    pointer-events: none; }
     .about-video__icon.hide {
       opacity: 0; }
     .about-video__icon img {
       width: 120px; }
 
 .about__info {
-  width: 34.3%;
+  width: 40%;
   padding-left: 60px; }
 
 .about__title {
@@ -1518,6 +1534,8 @@ body.hidden {
   display: none;
   padding-top: 16px;
   padding-left: 50px; }
+  .advantages__text.show {
+    display: block; }
   .advantages__text a {
     color: #1F72E4; }
 
@@ -1779,7 +1797,7 @@ body.hidden {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Inter", sans-serif;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   color: #1F72E4;
   line-height: 1.125;
   margin-bottom: 10px;
