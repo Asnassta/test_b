@@ -1233,6 +1233,9 @@ body.hidden {
 
 /*==========/intro==========*/
 /*=========About========*/
+.about .ytp-show-cards-title {
+  display: none; }
+
 .about_repair {
   padding: 80px 0; }
   .about_repair .about-video {
@@ -1254,8 +1257,9 @@ body.hidden {
   position: relative;
   cursor: pointer; }
   .about-video__content > * {
-    width: 100% !important;
+    width: 100%;
     min-height: 200px;
+    height: 380px;
     -o-object-fit: cover;
     object-fit: cover; }
   .about-video__content .html5-video-player .video-stream {
@@ -3193,6 +3197,8 @@ body.hidden {
       display: none; }
     .intro .btn span:last-child {
       display: inline-block; }
+  .about-video__content > * {
+    height: 300px; }
   .about-video__icon img {
     width: 60px; }
   .history-founder__info {
@@ -3261,6 +3267,8 @@ body.hidden {
     .btn-wrapper .btn {
       padding: 20px;
       min-width: auto; }
+  .about-video__content > * {
+    height: 200px; }
   .service__photo img {
     height: 185px; }
   .service__info {

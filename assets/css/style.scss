@@ -351,6 +351,9 @@ body.hidden {
 
 /*=========About========*/
 .about {
+	.ytp-show-cards-title {
+		display: none;
+	}
 	&_repair {
 		padding: 80px 0;
 		.about-video {
@@ -371,8 +374,9 @@ body.hidden {
 		cursor: pointer;
 		&__content {
 			>* {
-				width: 100%!important;
+				width: 100%;
 				min-height: 200px;
+				height: 380px;
 				object-fit: cover;
 			}
 			.html5-video-player .video-stream {
@@ -2714,6 +2718,11 @@ body.hidden {
 
 	.about {
 		&-video {
+			&__content {
+				>* {
+					height: 300px;
+				}
+			}
 			&__icon {
 				img {
 					width: 60px;
@@ -2853,6 +2862,15 @@ body.hidden {
 		.btn {
 			padding: 20px;
 			min-width: auto;
+		}
+	}
+	.about {
+		&-video {
+			&__content {
+				>* {
+					height: 200px;
+				}
+			}
 		}
 	}
 	.service {
